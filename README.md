@@ -18,6 +18,6 @@ Where `n` is the maximum number of posts to print (positive integer <= 100)
 
 ## Libraries
 
-`Newtonsoft.Json` - JSON framework for .NET
+`Newtonsoft.Json` - JSON framework for .NET which provides an ability to serialize and deserialize JSON
 
-`Mono.Options` - option parsing library for C#
+`Mono.Options` - option parsing library for C# which helps to parse input parameters
