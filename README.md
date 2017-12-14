@@ -1,7 +1,7 @@
 
 ## Running
 
-Open HackerNews\HackerNews folder in cmd and run the following command:
+Open HackerNews folder in cmd and run the following command (it is assumed you have .NET Core installed. If not you can download it here   https://www.microsoft.com/net/download/windows):
 
 ```
 dotnet publish -c Release -r <runtime>
