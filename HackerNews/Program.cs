@@ -8,6 +8,8 @@ namespace HackerNews
 {
     class Program
     {
+        private const int MaxCount = 100;
+
         private static int? _postsCount;
         private static bool _showHelp = false;
         private static OptionSet _optionSet;
@@ -36,7 +38,7 @@ namespace HackerNews
         {
             ParseInputArguments(args);
 
-            if (_postsCount == null || _showHelp)
+            if (_postsCount == null || _postsCount > MaxCount || _showHelp)
             {
                 ShowHelp();
                 return;

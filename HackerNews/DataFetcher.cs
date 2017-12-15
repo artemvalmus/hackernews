@@ -38,7 +38,7 @@ namespace HackerNews
                     Points = (int?)json["score"],
                     Title = json["title"]?.ToString(),
                     Uri = json["url"]?.ToString(),
-                    Rank = i
+                    Rank = i + 1
                 });
             }
 
