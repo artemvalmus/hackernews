@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.Linq;
 
 namespace HackerNews
@@ -50,7 +51,7 @@ namespace HackerNews
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine($"Error occurred while processing the request. Message: { ex.ToString() }");
+                Console.WriteLine($"Error occurred while processing the request. Message: { ex.ToString() }");
             }
         }
 
@@ -70,14 +71,14 @@ namespace HackerNews
                 var json = JsonConvert.SerializeObject(validPosts, jsonSettings);
                 var formatted = JToken.Parse(json).ToString(Formatting.Indented);
 
-                System.Console.WriteLine(formatted);
+                Console.WriteLine(formatted);
             }
         }
 
         private static void ShowHelp()
         {
-            System.Console.WriteLine("Options:");
-            _optionSet.WriteOptionDescriptions(System.Console.Out);
+            Console.WriteLine("Options:");
+            _optionSet.WriteOptionDescriptions(Console.Out);
         }
 
         private static void ParseInputArguments(string[] args)
@@ -88,8 +89,8 @@ namespace HackerNews
             }
             catch (OptionException ex)
             {
-                System.Console.WriteLine($"Error occurred while parsing passed arguments. Message: { ex.ToString() }");
-                System.Console.WriteLine("Try `hackernews --help` for more information.");
+                Console.WriteLine($"Error occurred while parsing passed arguments. Message: { ex.ToString() }");
+                Console.WriteLine("Try `hackernews --help` for more information.");
                 return;
             }
         }
